@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dripson Drip Store</title>
+    <link rel="stylesheet" href="dripson.css">
+    <style>
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back-to-Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .hidden {
+            display: none;
+        }
+
+        #cart-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .product {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 0;
+        }
+
+        .add-to-cart {
+            background-color: #ff7700;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ff5500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Dripson Drip Store</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shoes">Nike Shoes</a></li>
+                    <li><a href="#clothes">Latest Clothes</a></li>
+                    <li><a href="#watches">Watches</a></li>
+                    <li><a href="#BELTS">Belts</a></li>
+                    <li><a href="#JEWELRIES">Jewelries</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Sidebar -->
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shoes">Nike Shoes</a></li>
+            <li><a href="#clothes">Contact</a></li>
+            <li><a href="#watches"> Watches</a></li>
+            <li><a href="#BELTS">BELTS</a></li>
+            <li><a href="JEWELRIES">Jewelries</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+           
+            <div class="hero-content">
+                <h2>Step Up Your Style</h2>
+                <p>Discover the latest Nike shoes, Timberlands, and trendy clothing to elevate your look.</p>
+                <a href="#shoes" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+      <!-- Nike Shoes Section with Carousel -->
+<section id="shoes" class="product-section">
+    <h2>FOOT WEARS</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="product">
+                <img src="IMG-20250123-WA0013.jpg" alt="Nike Air Max">
+                <h3>NIKE SB</h3>
+                <p>#30,000</p>
+                <button class="add-to-cart-btn" data-name="NIKE SB" data-price="30000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0014.jpg" alt="TIMBER LAND">
+                <h3>TIMBER LAND</h3>
+                <p>#180,000</p>
+                <button class="add-to-cart-btn" data-name="TIMBER LAND" data-price="180000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0012.jpg" alt="Nike React">
+                <h3>VANS OFF THE WALL</h3>
+                <p>#35,000</p>
+                <button class="add-to-cart-btn" data-name="VANS" data-price="35000">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pexels">
+    
+    <h1>Give the Gift of Luxury - The <br> Perfect Bundle of Style and Savings.
+    </h1>
+    <div>
+     <a class="shop" href="#shoes">SHOP NOW</a>
+    </div>
+  
+   
+</section>
+
+<!-- Latest Clothes Section with Carousel -->
+<section id="clothes" class="product-section">
+    <h2>OUTFITS</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="product">
+                <img src="IMG-20250123-WA0005.jpg" alt="Clothing Item 1">
+                <h3>T-SHIRT</h3>
+                <p>#35,000</p>
+                <button class="add-to-cart-btn" data-name="T-SHIRT" data-price="35000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0007.jpg" alt="Clothing Item 2">
+                <h3>BOYS CROP TOP</h3>
+                <p>#60,000</p>
+                <button class="add-to-cart-btn" data-name="BOYS CROP TOP" data-price="60000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0003.jpg" alt="Clothing Item 3">
+                <h3>BAGGY JOGGERS</h3>
+                <p>#20,000</p>
+                <button class="add-to-cart-btn" data-name="BAGGY JORRGERS" data-price="20000">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Drip Tech Section with Carousel -->
+<section id="watches" class="product-section">
+    <h2>WATCHES</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="product">
+                <img src="IMG-20250123-WA0040.jpg" alt="Tech Item 1">
+                <h3>Hi WATCH PRO</h3>
+                <p>#20,000</p>
+                <button class="add-to-cart-btn" data-name="HI WATCH PRO" data-price="20000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0033.jpg" alt="Tech Item 2">
+                <h3>G-SHOCK</h3>
+                <p>#15,000</p>
+                <button class="add-to-cart-btn" data-name="G-SHOCK" data-price="15000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0038.jpg" alt="Tech Item 3">
+                <h3>APPLE WATCH-SERIES 8</h3>
+                <p>#25,000</p>
+                <button class="add-to-cart-btn" data-name="APPLE WATCH-SERIES 8" data-price="25000">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="BELTS" class="product-section">
+    <h2>BELTS</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="product">
+                <img src="IMG-20250123-WA0018.jpg" alt="">
+                <h3>BULLET BELT</h3>
+                <p>#8,000</p>
+                <button class="add-to-cart-btn" data-name="BULLET BELT" data-price="8000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0020.jpg" alt="">
+                <h3>BLACK BULLET BELT</h3>
+                <p>#8,500</p>
+                <button class="add-to-cart-btn" data-name="BLACK BULLET BELT" data-price="8500">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0022.jpg" alt="">
+                <h3>STONE BELT</h3>
+                <p>#50,000</p>
+                <button class="add-to-cart-btn" data-name="STONE BELT" data-price="50000">Add to Cart</button>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<section id="JEWELRIES" class="product-section">
+    <h2>JEWELRIES</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="product">
+                <img src="IMG-20250123-WA0052.jpg" alt="">
+                <h3>CROSS BRACELET</h3>
+                <p>#3,000</p>
+                <button class="add-to-cart-btn" data-name="Luxury Watch" data-price="3000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0054.jpg" alt="">
+                <h3>COPRICES</h3>
+                <p>#10,000</p>
+                <button class="add-to-cart-btn" data-name="Luxury Watch" data-price="10000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="IMG-20250123-WA0055.jpg" alt="">
+                <h3>CROSS CHAIN</h3>
+                <p>#2,000</p>
+                <button class="add-to-cart-btn" data-name="Luxury Watch" data-price="2000  ">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="cart">
+    <h2>Your Cart</h2>
+    <ul class="cart-items"></ul>
+    <div class="cart-total">
+        <strong>Total:</strong> #<span id="cart-total">0</span>
+    </div>
+</div>
+
+<section id="CHAINS" class="CHAINS AND RINGS">
+    <H2></H2>
+</section>
+    
+
+        <!-- Testimonial Section -->
+        <section id="testimonials" class="product-section">
+            <h2>What Our Customers Say</h2>
+            <div class="carousel">
+                <div class="carousel-track">
+                    
+                    <div class="testimonial">
+                        <p>"Absolutely love the quality of these products!"</p>
+                        <h4>- Sarah</h4>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Great customer service and fast delivery."</p>
+                        <h4>- James</h4>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The best place to shop for trendy outfits!"</p>
+                        <h4>- Mia</h4>
+                    </div>
+                    <div class="testimonial">
+                        <p>love their products</p>
+                        <h4>-- Victor</h4>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+         <section class="dripsec">
+            <img class="drip" src="dripson-removebg-preview.png" alt="">
+            <h1>OUR MOTTO IS DRIP TO THE WORLD</h1>
+         </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="C:\Users\user\Desktop\SQI PROJECT STORAGE - Copy\shoppingwebsite folder\DRIP\contact.html" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+            
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Dripson. All rights reserved.</p>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/"><img src="facebook-3d-icon-free-png.png" alt="Facebook"></a></li>
+                    <li><a href=""><img src="2491px-Logo_of_Twitter.svg.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="instagram.jpeg" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dripson Drip Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" title="Back to Top">&uarr;</button>
+
+    <script>
+        // Show Back-to-Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Scroll Back to Top
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        // Initialize an empty cart
+        let cart = [];
+    
+        // Function to add items to the cart
+        function addToCart(name, price) {
+            const item = cart.find((product) => product.name === name);
+    
+            if (item) {
+                // If item is already in cart, increase quantity
+                item.quantity++;
+            } else {
+                // Add a new item to the cart
+                cart.push({ name, price, quantity: 1 });
+            }
+    
+            updateCart();
+        }
+    
+        // Function to update the cart display
+        function updateCart() {
+            const cartItems = document.querySelector(".cart-items");
+            const cartTotal = document.getElementById("cart-total");
+    
+            // Clear the cart items list
+            cartItems.innerHTML = "";
+    
+            // Rebuild the cart items list
+            let total = 0;
+            cart.forEach((product) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${product.name} x${product.quantity} - $${product.price * product.quantity}`;
+                cartItems.appendChild(listItem);
+                total += product.price * product.quantity;
+            });
+    
+            // Update the total price
+            cartTotal.textContent = total.toFixed(2);
+        }
+    
+        // Add event listeners to "Add to Cart" buttons
+        const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+        addToCartButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const name = button.getAttribute("data-name");
+                const price = parseFloat(button.getAttribute("data-price"));
+                addToCart(name, price);
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const cartInfo = document.getElementById("cart-info");
+    const cartTotal = document.getElementById("cart-total");
+    let total = 0;
+
+
+
+    // Add event listeners to all "Add to Cart" buttons
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function () {
+            const price = parseFloat(this.getAttribute("data-price"));
+            total += price;
+
+            // Update the cart total and show the cart
+            cartTotal.textContent = total.toFixed(2);
+            cartInfo.classList.remove("hidden");
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        root: null, // Use the viewport as the container
+        rootMargin: "0px",
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate-slide-up");
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, observerOptions);
+
+    // Select all sections and divs to observe
+    const sections = document.querySelectorAll("section, div");
+    sections.forEach(section => observer.observe(section));
+});
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('open');
+}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
